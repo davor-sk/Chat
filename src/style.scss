@@ -1,0 +1,99 @@
+*{  
+    box-sizing: border-box;
+    margin: 0;
+}
+.body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+
+    .input{
+        width: 20vw;
+        margin: 3%;    
+        border-radius: 5px 5px 5px 5px;
+        border-width: medium;
+        background-color: lightblue;
+    }
+    
+    .button{
+        width: 6vw;
+        border-radius: 5px 5px 5px 5px;
+        border-width: medium;
+        background-color: lightblue;
+    }
+    
+    .title{
+        display: flex;
+        justify-content: center;
+        color: floralwhite;
+    } 
+    
+    form{
+        display: flex;
+        align-items: center;
+        position: fixed;
+        left: 40%;
+        top: 90%;
+    }
+
+    .Messages-list{
+        list-style-type: none;
+        padding: 5%;
+        font-size: 2.2vh;
+        line-height: 3vh;
+        display: flex;
+        flex-direction: column;
+
+        .Messages-message{
+            max-width: 30%;
+            align-self: flex-start;
+
+            .Content{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            
+            .Name{
+                background-color: blue;
+                text-align: center;
+                max-width: fit-content;
+                padding: 0.5vw;
+                margin-bottom: 0.5vh;    
+                border-radius: 5px;
+                border-width: medium;
+                align-self: flex-start;            
+            }
+
+            .Text{
+                background-color: blueviolet;
+                padding: 0.5vw;
+                margin-bottom: 1vh;    
+                border-radius: 5px 5px 5px 5px;
+                border-width: medium;
+                width: fit-content;
+                align-self: flex-start;
+            }
+        }
+        
+        .currentMember{            
+            align-self: flex-end;
+
+            .Name{
+                background-color: rgb(64, 197, 38);
+                align-self: flex-end;
+            }
+
+            .Text{
+                background-color: bisque;
+                align-self: flex-end;
+            }
+        } 
+    }
+}

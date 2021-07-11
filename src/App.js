@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Message from './Message';
 import NewMessage from './NewMessage';
+import './style.css';
 
 const randomUser = () => {
   const adjectives = ["autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark", "summer", "icy"];
