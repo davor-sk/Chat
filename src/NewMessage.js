@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function NewMessage ({message}) {
+export default function NewMessage({ messages }) {
 
-    return(
-        <div>
-            <span>{message}</span>
-        </div>);
+   return (
+    <div>
+    <ul>
+      {messages.map((message) => showMsg(message))}
+    </ul>
+    </div>
+  );
 }
+

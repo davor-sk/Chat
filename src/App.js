@@ -1,37 +1,22 @@
-import React from "react";
-import Input from './Input';
+import React from 'react';
+import Message from './Message';
 import NewMessage from './NewMessage';
 
 
+function App() {
+  const [messages, setMessages] = useState([]);
+  const [member, setMember] = useState('');
 
-export default class App extends React.Component {
-  constructor(props){
-    super(props)
-
-    this.state = {
-      users: [
-        {id: 1, name: 'Davor', color: 'blue', message: ''},
-        {id: 2, name: 'Nikolina', color: 'pink', message: ''}
-      ],
-      maxId: 2
-    }
-  };
-
-  handleAddMsg = (msg) => {
-    const messages = this.state.messages;
-     messages.push({
-       text: msg,
-       member: this.state.member
-     })
-    this.setState({messages: messages})
-  }
-
-   
-
-  render(){
-    return(<div>
-              <Input onAdd={this.handleAddMsg} />
-              <NewMessage />
-          </div>);
-  }
+     
+  return (
+    <div>
+      <div>
+        <h1>Chat application</h1>
+      </div>      
+      <Message handleSendMessage={handleSendMessage} />        
+      <NewMessage messages={messages} />
+    </div>
+  );  
 }
+
+export default App;
