@@ -20,7 +20,7 @@ function App() {
     name: randomUser(),
   });
 
-  const drone = useMemo(() => new window.Scaledrone(CHANNEL_ID, { data: {name: randomUser()}}), []);  // mogu raščlanit member data:{name: randomUser(), color: randomColor()}
+  const drone = useMemo(() => new window.Scaledrone(CHANNEL_ID, { data: {name: randomUser()}}), []);  
   console.log(drone); 
   
   useEffect(() => {
